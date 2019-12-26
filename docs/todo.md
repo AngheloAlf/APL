@@ -1,0 +1,28 @@
+# Docs todo
+
+- [ ] Filetypes
+- [x] Primitives types
+- [ ] Variables
+- [ ] Type qualifiers
+- [ ] Functions
+- [ ] Control flow
+- [ ] Namespaces
+- [x] Classes
+- [ ] Overload and override
+- [ ] Inheritance
+- [ ] abstract classes
+- [ ] Interfaces
+- [ ] Templates
+- [ ] Modifiers
+- [ ] default heap allocation
+- [ ] import system
+- [ ] casting
+- [ ] keywords
+- [ ] standard lib
+- [ ] standard abstract lib
+- [ ] Exceptions and backtrace
+- [ ] Arrays
+- [ ] Magic methods (python-like)
+- [ ] Compile time operators
+- [ ] Meta-Classes
+- [ ] Annotations and Decorators

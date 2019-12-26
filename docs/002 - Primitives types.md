@@ -23,6 +23,18 @@ The built-in basic types are:
 | `float32` | 32 bits | IEEE 754 | IEEE 754 single-precision binary floating-point |
 | `float64` | 64 bits | IEEE 754 | IEEE 754 double-precision binary floating-point |
 | `bool` | to be decided | `false` and `true` |  |
+| `void` | none | none | Not a type, but used by functions which don't have return value, and `void *`. |
+| `imaginary32` | 32 bits | (IEEE 754)*i | Handles imaginary numbers described by $b * i$ |
+| `imaginary64` | 64 bits | (IEEE 754)*i | Handles imaginary numbers described by $b * i$ |
+| `complex64` | 64 bits | IEEE 754 + (IEEE 754)*i | Handles complex numbers described by $a + b * i$ |
+| `complex128` | 128 bits | IEEE 754 + (IEEE 754)*i | Handles complex numbers described by $a + b * i$ |
+
+`char` and `uchar` types also exists, but they are syntactic sugar for `int8` and `uint8` respectively.
+
+
+## Complex and imaginary types
+
+// TODO
 
 
 ## Machine related 
@@ -54,6 +66,16 @@ You can also tread a pointer as an array if the memory pointed is a multiple of 
 
 The language itself provides no runtime protection (like exceptions) when goofing with pointers, it's programmer dutty to not shoot himself (or herself) in the foot.
 
+### Memory allocation
+
+The syntax to allocate heap memory for a pointer is `T *ptr = new T;`. This just declares the pointer and assign memory to it (is like calling C `malloc`).
+
+The syntax to allocate heap memory and define a pointer is:
+- For basic types: `int64 *number = new int64(42);`.
+- For objecs: `T *ptrToObject = new T(/*parameters*/);`.
+
+Remember to `delete ptr;` when you have finished using it.
+
 
 ## Arrays
 
@@ -76,12 +98,11 @@ Arrays works C arrays, but with extra features... and overhead.
     - `T var[6][][6]` is not valid.
 - `T var[n]` lives as long it's scope is alive. It should live in the stack and not in the heap.
 - `T var[n]` just provide the corresponding memory to `var`, but does not encorage `var` having a length of `n`. The real type of `var` is `T var[]`. So, the following is valid code:
-
-```C
-T a[5];
-T b[15];
-a = b; // no errors, besides the difference of length.
-```
+    ```C
+    T a[5];
+    T b[15];
+    a = b; // no errors, besides the difference of length.
+    ```
 
 ### Implementation
 
@@ -110,6 +131,12 @@ This way, we can always know the length of the array at runtime.
   - If `i < -var.len`, then `var[i]` will raise an `IndexUnderflowException`.
 - User can add and/or override array's behavior. This will be explained in it's own chapter.
 
+### Array life
+
+The array is automatically destroyed when the scope ends, but if the array contains elements that have been allocated with `new` (or a custom allocator), they will probably still exists after the array desctruction. You have to manually `destroy` those elements before the array desctruction.
+
+You can also heap allocate an array using `T[] arr = new T[n];`. Please note that `n` can be a integer literal, or a variable. If you do this, remember to `delete arr;`.
+
 
 ## Arrays vs pointers
 
@@ -133,8 +160,6 @@ When using an array, the language and the programmer asumes it can use the `.len
 So, what to do?
 
 The standard library contains a function that can insert the data in the pointer, so it can be safelly used as an array. More about it will be discussed it the standard library chapter.
-
-
 
 If, for some reason, you don't want to use the standard library, you can use some hacky code like the following: 
 

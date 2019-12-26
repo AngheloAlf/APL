@@ -6,6 +6,8 @@ Don't get me wrong, I love C, but sometimes i feel like I'm writing unnecesary c
 
 Why don't use C++, Python, Java, or any other language that already has those features? Because they have stuff I don't like (C++ is too verbose, too big and some weird features I don't like. Python is slow, don't have typed variables. Java is Java) and lacks of important features I like (low level programming (C++ has it, but meh), pointers, low ram usage and `Segmentation fault`s). Also, I want to make my own language.
 
+APL is mainly based in C99 and C11 (don't expect API or ABI compatibility), with a lot if features ~~stolen~~ borrowed from Python and C++, and maybe a bit of Java and others.
+
 Don't expect seriousness from this language, documentation, compiler, grammar, me, or anything related to this project. This is just a fun, personal project that should not be used in any real world problem.
 
 // TODO: index
