@@ -8,7 +8,7 @@ Classes must follow the following rules:
 class NAME{
     T some_member;
     T *other_member;
-    /*more variables member*/
+    /*more attributes*/
 
     constructor(/* parameters */){
         /*Do constructor stuff*/
@@ -52,8 +52,9 @@ To use the members of an object you have to use a dot. For example `obj.myCoolMe
 
 To use the members of an object pointer, you use `->`. For example `ptr->someMember;`.
 
-## Variables members
+## Attributes
 
+- The attributes are the variables contained in a class.
 - Must be declared before any method declaration or definition.
 - Can't be initialized in the declaration, they can only be defined in methods (or external if they are public).
 - There are no "static" variables.
@@ -68,18 +69,23 @@ To use the members of an object pointer, you use `->`. For example `ptr->someMem
 
 ## Methods members
 
+- Are like the functions of a class.
 - Has the same signature declaration as a normal function.
-- May refer to variables member by it's name, or by the use of the implicit `this`.
+- May refer to attributes by it's name, or by the use of the implicit `this`.
 - There are no "static" methods.
 - The rules of functions also apply to methods.
 
+## Members
+
+A member refers to a method or an attribute of a class.
+
 ## `this` and `self`
 
-You may write and read data to variables members, or call methods using the implicit `this` which exists in every method (including `constructor` and `destructor`).
+You may write and read data to attributes, or call methods using the implicit `this` which exists in every method (including `constructor` and `destructor`).
 
 Besides `this`, also exists `self`<sup>1</sup>, which serves the same function.
 
-You can also use the class' methods and variables members without using `this` or `self` if there is not something with the same name in scope.
+You can also use the class' methods and attributes without using `this` or `self` if there is not something with the same name in scope.
 
 Both `this` and `self` are of type "pointer to class".
 
@@ -103,13 +109,13 @@ The following are the defaults visibilities:
 
 | Class | `public` |
 | Method member | `public` |
-| Variable member | `protected` |
+| Attribute | `protected` |
 
 ## Inside an object
 
-An object instance only has the variables members. Methods are not part of it, rather are part of the class.
+An object instance only has the attributes. Methods are not part of it, rather are part of the class.
 
-Looking at this from a C point of view, objects are instances of `struct`s which contains the class variables members. Methods are just functions with an extra parameter.
+Looking at this from a C point of view, objects are instances of `struct`s which contains the class attributes. Methods are just functions with an extra parameter.
 
 ## When the destructor is called
 

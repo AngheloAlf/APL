@@ -32,12 +32,34 @@ The built-in basic types are:
 `char` and `uchar` types also exists, but they are syntactic sugar for `int8` and `uint8` respectively.
 
 
-## Complex and imaginary types
+### Basic strings
+
+Like in C, APL has the notion of strings like a "null-terminated characters array".
+
+A basic string can be declared in two ways:
+- `char *aString;`
+- `char otherString[];`
+Each one has it's own advantages that will be discussed below.
+
+Please note that `int8 *str;` or `int8 str[]` also works since `int8` and `char` are the same.
+
+You can also define string literals with `""`. The `const` qualifier is mandatory when using string literals. For example:
+```
+const char *strLiteral = "I am an example.";
+const char otherLit[] = "This is other example.";
+```
+
+Besides basic strings, a `String` class exists, which will be discussed in the strings chapter.
+
+
+### Complex and imaginary types
 
 // TODO
 
+`I`
 
-## Machine related 
+
+### Machine related 
 
 - `usize_t`: Refers to memory sizes. It can hold any positive array index. Unsigned.
 - `uptr_t`: It can hold any pointer. Unsigned.
@@ -155,7 +177,7 @@ T *b = a; // No problem.
 
 This is the tricky one.
 
-When using an array, the language and the programmer asumes it can use the `.len` (for example) in any array, but if this array was originally a pointer, it is posible it does not contain this data and/or others needed attributes.
+When using an array, the language and the programmer asumes it can use the `.len` (for example) in any array, but if this array was originally a pointer, it is posible it does not contain this data and/or others needed attributes. So, if a function parameter is an array type, you can't simply pass it a pointer type.
 
 So, what to do?
 
@@ -175,7 +197,7 @@ arr = &ptr[1];
 // T arr[] = ptr+1; // also valid.
 ```
 
-But, this is discoraged.
+But, this is discoraged because language semantics, features and implementation may change in newer versions.
 
 ### What to use?
 

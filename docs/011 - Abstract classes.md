@@ -14,4 +14,10 @@ The `abstract` keyword is a modifier for classes and methods.
 
 - If a class has the `abstract` modifier, the class can't be instantiated.
 - A class with the `abstract` modifier may have `abstract` methods.
-- An `abstract` class can be used as a type for declaring a variable, but the initialization must be done with a child class that `extends` the abstract class.
+- An `abstract` class can be used as a type for declaring a variable, but the initialization must be done with a child class that `extends` the abstract class and implements every `abstract` method.
+  - In that case, only the methods and attributes that are available to that `abstract` class are available to that variable.
+- A class that `extends` an `abstract` class may not implement every `abstract` method of that class, in which case, the new class is `abstract` too and must be tagged `abstract`.
+
+## `extends`
+
+The `extends` keyword may also be used for extending classes that are not `abstract`.

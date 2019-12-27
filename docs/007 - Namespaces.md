@@ -19,3 +19,9 @@ It is recommended to have one namespace per file. But a namespace can be defined
 To use a function or class from other namespace, you should refer to it as `otherNamespace::someFunction();`.
 
 You can have namespaces inside namespaces.
+
+- Variables may be declared inside a namespace.
+- Variables with any of the basic types and defined with the `const` qualifier may be defined alongside its declaration.
+- Variables of any other type can't be defined alongside its declaration. 
+  - It may be defined inside a function.
+  - Using an unitializated variable is _Undefined behavior_. // TODO: change this to be an exception or a compile time error.

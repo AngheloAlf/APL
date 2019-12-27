@@ -11,17 +11,20 @@
 - [ ] Overload and override
 - [x] Inheritance
 - [x] Abstract classes
-- [ ] Interfaces
+- [x] Interfaces
 - [ ] Templates
 - [ ] Modifiers
 - [ ] Scopes
+- [ ] Expressions and operators
 - [ ] Main
 - [ ] default heap allocation
 - [ ] import system
 - [ ] casting
-- [ ] standard lib
+- [ ] Variable arguments functions
 - [ ] standard abstract lib
-- [ ] Comments
+- [ ] standard lib
+- [ ] Strings
+- [ ] Comments and indentation
 - [ ] Exceptions and backtrace
 - [ ] Prototype modification
 - [ ] Arrays

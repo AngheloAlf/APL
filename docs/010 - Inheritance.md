@@ -50,7 +50,7 @@ class Overloading extends ChildClass{
 
 When inheriting from multiples classes, it is recommended to use the `Class::method();` syntax. But the `super->method(/*params*/);` one will work too (but take care when using it).
 
-Just for clarification, there is no "variable member override".
+Just for clarification, there is no "attribute override".
 
 ## Special methods
 
@@ -85,11 +85,11 @@ Just for clarification, there is no "variable member override".
 - Protected and public members:
   - Simple inheritance:
     - Methods with the same name may be overloaded and/or overrided without problems.
-    - Child members can't have the same name as any of the parent variables members.
-    - Child variables members can't have the same name as any of the parent members.
+    - Child members can't have the same name as any of the parent attributes.
+    - Child attributes can't have the same name as any of the parent members.
   - Multiple inheritance.
     - The rules of simple inheritance also apply here.
     - If two (or more) parents have methods with the same name, all of them will be inherited, and the methods with the same signature will be overriden in the same order as they are `extends`ed, from left to right.
       - When overloading a method and calling the overloaded method, you can use the `super->method(/*params*/);` which will call the method from the _rightest_ parent which implements it.
       - When overloading a method and calling the overloaded method, you can use the `Class::method(/*params*/);` to refer to a specific class implementation. You can even call all of them.
-    - If a parent member has the same name as any of the variables members of any other parent member, they together can't be parents of a child class.
+    - If a parent member has the same name as any of the attributes of any other parent member, they together can't be parents of a child class.
