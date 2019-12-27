@@ -64,6 +64,7 @@ To use the members of an object pointer, you use `->`. For example `ptr->someMem
 - Each class may declare/define one or more constructors and a desctructor.
 - The constructor(s) (if defined) must be named `constructor`, it does not have a return type, and can have any number of parameters.
 - The desctructor (if defined) must be named `destructor`, it does not have a return type, and can't have parameters.
+- The destructor can't be overloadded.
 
 ## Methods members
 
@@ -100,11 +101,9 @@ When using the visibility modifiers, they must be the first modifier of the memb
 
 The following are the defaults visibilities:
 
-| --- | --- |
 | Class | `public` |
 | Method member | `public` |
 | Variable member | `protected` |
-| --- | --- |
 
 ## Inside an object
 
@@ -130,7 +129,9 @@ Besides the special methods `constructor` and `desctructor`, there also exists t
   - Is called when the scope containing the pointer ends. Specifically, just after the return.
   - It is **not** called when using the `delete` operator.
 - Both take no parameters and have no return type.
+- They can not be overloadded.
 
 
 <sup>1</sup> Yeah, I like Python. Sue me.
+
 <sup>2</sup> see the Inheritance chapter.
