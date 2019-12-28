@@ -12,10 +12,11 @@
 - [x] Inheritance
 - [x] Abstract classes
 - [x] Interfaces
-- [ ] Templates
-- [ ] Modifiers
-- [ ] Scopes
-- [ ] Expressions and operators
+- [x] Templates
+- [x] Modifiers
+- [x] Scopes
+- [ ] Operators
+- [ ] Expressions
 - [ ] Main
 - [ ] default heap allocation
 - [ ] import system

@@ -107,8 +107,10 @@ When using the visibility modifiers, they must be the first modifier of the memb
 
 The following are the defaults visibilities:
 
+| Kind | Visibility |
+| --- | --- |
 | Class | `public` |
-| Method member | `public` |
+| Method | `public` |
 | Attribute | `protected` |
 
 ## Inside an object
