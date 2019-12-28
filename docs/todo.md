@@ -15,24 +15,27 @@
 - [x] Templates
 - [x] Modifiers
 - [x] Scopes
-- [ ] Operators
+- [x] Operators
+- [ ] Literals
 - [ ] Expressions
 - [ ] Main
-- [ ] default heap allocation
-- [ ] import system
-- [ ] casting
+- [ ] Default heap allocation
+- [ ] Import system
+- [ ] Casting
 - [ ] Variable arguments functions
-- [ ] standard abstract lib
-- [ ] standard lib
+- [ ] Magic methods 
+  - Python-like operator overloading and others
+- [ ] Standard abstract lib
+- [ ] Standard lib
 - [ ] Strings
 - [ ] Comments and indentation
 - [ ] Exceptions and backtrace
 - [ ] Prototype modification
 - [ ] Arrays
-- [ ] Magic methods (python-like operator overloading and others)
 - [ ] Compile time operators
-- [ ] Meta-Classes
-- [ ] Annotations and Decorators
-- [ ] keywords
+- [ ] Annotations and decorators
+- [ ] Keywords
+- [ ] FAQ
+  - How can there be a FAQ if nobody else is even aware this language exists?
 
 The ones marked with [x] means that that documentation explain almost everything it must explain for that topic (I guess) and is more or less properly formatted.

@@ -68,7 +68,7 @@ Besides basic strings, a `String` class exists, which will be discussed in the s
 
 ## Pointers
 
-A pointer is just an address memory.
+A pointer is just an address memory. It is considered unsigned.
 
 ### Declaration
 
