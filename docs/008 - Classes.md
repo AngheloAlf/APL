@@ -119,6 +119,8 @@ An object instance only has the attributes. Methods are not part of it, rather a
 
 Looking at this from a C point of view, objects are instances of `struct`s which contains the class attributes. Methods are just functions with an extra parameter.
 
+Continuing the C point of view, objects can also be seen as a pointer to a `struct`. This way, the pass by reference is trivial.
+
 ## When the destructor is called
 
 The destructor is called after the function's return.

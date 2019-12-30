@@ -25,17 +25,41 @@
 - [ ] Variable arguments functions
 - [ ] Magic methods 
   - Python-like operator overloading and others
-- [ ] Standard abstract lib
-- [ ] Standard lib
-- [ ] Strings
 - [ ] Comments and indentation
 - [ ] Exceptions and backtrace
 - [ ] Prototype modification
-- [ ] Arrays
 - [ ] Compile time operators
 - [ ] Annotations and decorators
 - [ ] Keywords
 - [ ] FAQ
   - How can there be a FAQ if nobody else is even aware this language exists?
+
+- [ ] Standard abstract lib
+- [ ] Standard lib
+  - [ ] Strings
+  - [ ] Arrays
+  - [ ] Memory allocation
+  - [ ] Files
+    - [ ] `stdin`, `stdout` and `stderr`
+  - [ ] Date (ISO 8601)
+  - [ ] Time
+  - [ ] Abstract data types (ADT)
+    - [ ] List
+      - Something like a C++ vector.
+    - [ ] Queue
+    - [ ] Stack
+    - [ ] Tuple
+    - [ ] Map
+    - [ ] Set
+    - [ ] Vector
+      - A mathematical vector, not a C++ vector.
+    - [ ] Matrix
+  - [ ] Regex
+  - [ ] Sockets
+  - [ ] Threads
+  - [ ] Mutex
+  - [ ] JSON
+  - [ ] General purpose functions
+    - [ ] Assert
 
 The ones marked with [x] means that that documentation explain almost everything it must explain for that topic (I guess) and is more or less properly formatted.

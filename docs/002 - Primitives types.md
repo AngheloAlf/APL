@@ -29,8 +29,6 @@ The built-in basic types are:
 | `complex64` | 64 bits | IEEE 754 + (IEEE 754)*i | Handles complex numbers described by $a + b * i$ |
 | `complex128` | 128 bits | IEEE 754 + (IEEE 754)*i | Handles complex numbers described by $a + b * i$ |
 
-`char` and `uchar` types also exists, but they are syntactic sugar for `int8` and `uint8` respectively.
-
 
 ### Basic strings
 
@@ -65,6 +63,27 @@ Besides basic strings, a `String` class exists, which will be discussed in the s
 - `uptr_t`: It can hold any pointer. Unsigned.
 - `sptr_t`: Intended to be used in `uptr_t` differences. Signed.
 - `ptrdiff_t`: For storing pointer differences. Signed.
+
+
+### Built-in alias types
+
+The language includes some types that are aliases to other basic types, just for convenience.
+
+They can be seen as a typedef of it's original type, but they are keywords.
+
+| Alias type | Refers to | Notes |
+| --- | --- | --- |
+| `byte` | `int8` |  |
+| `ubyte` | `uint8` | unsigned |
+| `char` | `int8` |  |
+| `uchar` | `uint8` | unsigned |
+
+This types, being just aliases, can be interchanged with their original type or even other alias.
+
+For example, consider the function `uchar someFunction(byte param1, uchar param2[]);`. As first parameter you can pass a variable of type `byte`, `int8` or even `char`, since they are all the same. With the second parameter the same happens, for example variables with types `uchar []`, `uint8 []` and `ubyte []` are valid arguments. This also works for the return type, you can store it in a `ubyte` or a `uint8` variable too.
+
+Even if they are interchangeable, the recommendation is to always match the same types.
+
 
 ## Pointers
 

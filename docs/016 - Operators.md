@@ -50,7 +50,7 @@ Types promotion rules work here.
 | Operator | Name | Description | Example |
 | --- | --- | --- | --- |
 | `&&` | Logical and | Returns `true` if both statements evaluates to `true`, `false` otherwise | `a <= c && b != d;` |
-| `||` | Logical or | Returns `true` if one of the statements evaluates to `true`, `false` otherwise | `a <= c || b != d;` |
+| `\|\|` | Logical or | Returns `true` if one of the statements evaluates to `true`, `false` otherwise | `a <= c \|\| b != d;` |
 | `!` | Logical not | Returns `true` if the statement evaluates to `false`, `true` otherwise | `!a;` |
 
 ## Bitwise operators
@@ -58,7 +58,7 @@ Types promotion rules work here.
 | Operator | Name | Description | Example |
 | --- | --- | --- | --- |
 | `&` | Bitwise and |  | `a & b;` |
-| `|` | Bitwise or |  | `a | b;` |
+| `\|` | Bitwise or |  | `a \| b;` |
 | `~` | Bitwise not |  | `~a;` |
 | `^` | Bitwise xor |  | `a ^ d;` |
 | `<<` | Left shift |  | `a << b;` |
@@ -80,7 +80,7 @@ Types promotion rules work here.
 | `%=` | Modulus assignment |  | `a %= b;` |
 | `^^=` | Exponentiation assignment |  | `a ^^= b;` |
 | `&=` | Bitwise and assignment |  | `a &= b;` |
-| `|=` | Bitwise or assignment |  | `a |= b;` |
+| `\|=` | Bitwise or assignment |  | `a \|= b;` |
 | `^=` | Bitwise xor assignment |  | `a ^= d;` |
 | `<<=` | Left shift assignment |  | `a <<= b;` |
 | `>>=` | Right shift assignment |  | `a >>= b;` |
@@ -203,11 +203,11 @@ Operators are listed from top to bottom, in descending precedence.
 | --- | --- | --- | --- |
 | 11 | `a ^ b` | Bitwise xor | Left to right |
 | --- | --- | --- | --- |
-| 12 | `a | b` | Bitwise or | Left to right |
+| 12 | `a \| b` | Bitwise or | Left to right |
 | --- | --- | --- | --- |
 | 13 | `a && b` | Logical and | Left to right |
 | --- | --- | --- | --- |
-| 14 | `a || b` | Logical or | Left to right |
+| 14 | `a \|\| b` | Logical or | Left to right |
 | --- | --- | --- | --- |
 | 15 | `a ? b : c` | Conditional operator | Right to left |
 | 15 | `throw` | Throw operator | Right to left |
@@ -221,7 +221,7 @@ Operators are listed from top to bottom, in descending precedence.
 | 15 | `%=` | Modulus assignment | Right to left |
 | 15 | `^^=` | Exponentiation assignment | Right to left |
 | 15 | `&=` | Bitwise and assignment | Right to left |
-| 15 | `|=` | Bitwise or assignment | Right to left |
+| 15 | `\|=` | Bitwise or assignment | Right to left |
 | 15 | `^=` | Bitwise xor assignment | Right to left |
 | 15 | `<<=` | Left shift assignment | Right to left |
 | 15 | `>>=` | Right shift assignment | Right to left |
