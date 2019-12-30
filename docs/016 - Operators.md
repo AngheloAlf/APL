@@ -61,8 +61,10 @@ Types promotion rules work here.
 | `\|` | Bitwise or |  | `a \| b;` |
 | `~` | Bitwise not |  | `~a;` |
 | `^` | Bitwise xor |  | `a ^ d;` |
-| `<<` | Left shift |  | `a << b;` |
-| `>>` | Right shift |  | `a >> b;` |
+| `<<` | Arithmetic left shift |  | `a << b;` |
+| `>>` | Arithmetic right shift |  | `a >> b;` |
+| `<<<` | Logical left shift |  | `a <<< b;` |
+| `>>>` | Logical right shift |  | `a >>> b;` |
 
 ~~If any of the elements involved in a shift operator are negative, your PC will format itself and install TempleOS.~~
 
@@ -82,8 +84,10 @@ Types promotion rules work here.
 | `&=` | Bitwise and assignment |  | `a &= b;` |
 | `\|=` | Bitwise or assignment |  | `a \|= b;` |
 | `^=` | Bitwise xor assignment |  | `a ^= d;` |
-| `<<=` | Left shift assignment |  | `a <<= b;` |
-| `>>=` | Right shift assignment |  | `a >>= b;` |
+| `<<=` | Arithmetic left shift assignment |  | `a <<= b;` |
+| `>>=` | Arithmetic right shift assignment |  | `a >>= b;` |
+| `<<<=` | Logical left shift assignment |  | `a <<<= b;` |
+| `>>>=` | Logical right shift assignment |  | `a >>>= b;` |
 
 ## Identity operators
 
@@ -184,8 +188,10 @@ Operators are listed from top to bottom, in descending precedence.
 | 6 | `a + b` | Addition | Left to right |
 | 6 | `a - b` | Substraction | Left to right |
 | --- | --- | --- | --- |
-| 7 | `a << b` | Left shift | Left to right |
-| 7 | `a >> b` | Right shift | Left to right |
+| 7 | `a << b` | Arithmetic left shift | Left to right |
+| 7 | `a >> b` | Arithmetic right shift | Left to right |
+| 7 | `a <<< b` | Logical left shift | Left to right |
+| 7 | `a >>> b` | Logical right shift | Left to right |
 | --- | --- | --- | --- |
 | 8 | `a < b` | Less than | Left to right |
 | 8 | `a > b` | Greater than | Left to right |
@@ -223,8 +229,10 @@ Operators are listed from top to bottom, in descending precedence.
 | 15 | `&=` | Bitwise and assignment | Right to left |
 | 15 | `\|=` | Bitwise or assignment | Right to left |
 | 15 | `^=` | Bitwise xor assignment | Right to left |
-| 15 | `<<=` | Left shift assignment | Right to left |
-| 15 | `>>=` | Right shift assignment | Right to left |
+| 15 | `<<=` | Arithmetic left shift assignment | Right to left |
+| 15 | `>>=` | Arithmetic right shift assignment | Right to left |
+| 15 | `<<<=` | Logical left shift assignment | Right to left |
+| 15 | `>>>=` | Logical right shift assignment | Right to left |
 
 
 <sup>1</sup> https://www.urbandictionary.com/define.php?term=fuckton

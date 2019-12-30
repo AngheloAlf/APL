@@ -16,17 +16,19 @@
 - [x] Modifiers
 - [x] Scopes
 - [x] Operators
-- [ ] Literals
+- [x] Literals
+- [x] Enums
 - [ ] Expressions
 - [ ] Main
 - [ ] Default heap allocation
 - [ ] Import system
 - [ ] Casting
 - [ ] Variable arguments functions
-- [ ] Magic methods 
+- [ ] Operator overload and magic methods
   - Python-like operator overloading and others
 - [ ] Comments and indentation
 - [ ] Exceptions and backtrace
+- [ ] Global scope
 - [ ] Prototype modification
 - [ ] Compile time operators
 - [ ] Annotations and decorators
@@ -35,7 +37,17 @@
   - How can there be a FAQ if nobody else is even aware this language exists?
 
 - [ ] Standard abstract lib
+  - [ ] Interfaces
+    - [ ] BasicArithmetic
+      - Addition, substraction, multiplication, division, unary plus, unary minus (at least with self)
+    - [ ] Comparable
+    - [ ] Callable
+    - [ ] Shiftable
+  - [ ] Abstract classes
+    - [ ] 
 - [ ] Standard lib
+  - [ ] Base class
+  - [ ] Smart pointer
   - [ ] Strings
   - [ ] Arrays
   - [ ] Memory allocation
@@ -59,7 +71,10 @@
   - [ ] Threads
   - [ ] Mutex
   - [ ] JSON
+  - [ ] Algorithms
+    - [ ] Sorts
   - [ ] General purpose functions
     - [ ] Assert
+    - [ ] Text
 
 The ones marked with [x] means that that documentation explain almost everything it must explain for that topic (I guess) and is more or less properly formatted.

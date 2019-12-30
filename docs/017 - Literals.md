@@ -110,4 +110,4 @@ Raw literal
 | `\Unnnnnnnn` | universal character name | code point `U+nnnnnnnn` | Can only be used in 4bytes representable literals or bigger, and strings literals |
 
 Notes:
-- For Unicode escape sequences: If a universal character name does not correspond to a code point in ISO/IEC 10646 (the range 0x0-0x10FFFF, inclusive), a compile-time error will be emitted.
+- For Unicode escape sequences: If a universal character name does not correspond to a code point in ISO/IEC 10646 (the range `0x0`-`0x10FFFF`, inclusive), or it is between the range of surrogate code points  `U+D800` - `U+DFFF`, inclusive), a compile-time error will be emitted.
