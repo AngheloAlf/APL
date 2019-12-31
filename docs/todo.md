@@ -23,7 +23,7 @@
 - [x] Default heap allocation
 - [ ] Pseudo garbage collection
 - [ ] Import system
-- [ ] Casting
+- [x] Casting
 - [ ] Variable arguments functions
 - [ ] Operator overload and magic methods
   - Python-like operator overloading and others
