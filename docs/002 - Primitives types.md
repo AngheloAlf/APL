@@ -178,6 +178,8 @@ The array is automatically destroyed when the scope ends, but if the array conta
 
 You can also heap allocate an array using `T[] arr = new T[n];`. Please note that `n` can be a integer literal, or a variable. If you do this, remember to `delete arr;`.
 
+Also, a heap-allocated array may escape the scope where it was allocated, and even returned from the function that created it. In that case, it's caller responsability to deallocate the memory.
+
 
 ## Arrays vs pointers
 

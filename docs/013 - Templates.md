@@ -4,8 +4,7 @@ Templates allow types to be a parameters for functions, methods, classes and int
 
 ## Templates types
 
-- Templates types are the types pararameters. For example, in `<T, U>`, `T` and `U` are template types.
-- Template types can only be "uppercase single letters of the english alphabet", with the exception of `I`. At the same time, "uppercase single letters of the english alphabet" can't be used for any other thing that are not templates types.
+- Templates types are the types pararameters. For example, in `void example_func<T, U>(/*params*/);`, `T` and `U` are template types.
 - By defualt, all template types are classes (and interfaces). To override this behavior, you must use _template types qualifiers_.
 
 ### Templates types qualifiers
@@ -31,7 +30,7 @@ SomeType functionName<T, U>(T param, int64 someNumber, U otherParam);
 T otherFunction<T>(T aRandomParam);
 ```
 
-In functions templates, there must always be at least one parameter of each template type. For example, a function that has 3 template types, `T`, `U` and `V`, must declare at least one param of type `T`, at least one param of type `U` and at least one param of type `V`.
+In functions templates, there must always be at least one use of each template type in the signature. For example, a function that has 3 template types, `T`, `U` and `V`, must declare at least one param of type `T`, at least one param of type `U` and at least one param of type `V`, or the return type to be one of those types and at least two parameters that uses the other two.
 
 ### Classes templates
 
@@ -62,7 +61,7 @@ Methods that are in a template class:
     }
     ```
 - If for some reason, a method needs an extra template type not provided by the class, it can ask it itself.
-  - Equal to function templates, this method must have a parameter for every template type it ask for.
+  - Equal to function templates, this method must use at least one time each template type in it's signature that it is asking for.
     ```
     class SomeClass<T, U>{
         U namingIsHard<basic M, basic W>(M mini, W wumbo);
@@ -101,6 +100,7 @@ If the template type has the `basic` or `type` qualifier, it does not have avali
     ```
     // <T *> is not allowed.
     // <U []> is not allowed either.
+    // So the following class is invalid.
     class NamingIsHard<T *, U []>{
 
     }

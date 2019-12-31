@@ -20,7 +20,8 @@
 - [x] Enums
 - [ ] Expressions
 - [x] Main
-- [ ] Default heap allocation
+- [x] Default heap allocation
+- [ ] Pseudo garbage collection
 - [ ] Import system
 - [ ] Casting
 - [ ] Variable arguments functions
@@ -46,8 +47,9 @@
   - [ ] Abstract classes
     - [ ] 
 - [ ] Standard lib
-  - [ ] Base class
-  - [ ] Smart pointer
+  - [ ] Bases
+    - [ ] Base class
+    - [ ] Smart pointer
   - [ ] Strings
   - [ ] Arrays
   - [ ] Memory allocation

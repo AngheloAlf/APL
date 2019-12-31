@@ -32,7 +32,7 @@ An object is a class' instance.
 
 To declare an object, just declare a variable of the type of your class. For example `ClassType myObject;`. Please note, this is just a declaration, it does not initializes the `ClassType` object like C++ would do, it just allocates enough memory for the object to be created.
 
-Using an uninitalizated object must emit a compilation error.
+Using an uninitalizated object must emit a compilation error, but calling it's methods is allowed.
 
 There are two ways two initializate an object:
 
@@ -141,8 +141,10 @@ Besides the special methods `constructor` and `desctructor`, there also exists t
 - `ptrDestructor`:
   - Is called when the scope containing the pointer ends. Specifically, just after the return.
   - It is **not** called when using the `delete` operator.
+  - If an array of pointer to this class is `delete`d, `ptrDestructor` will be called.
+  - If an array of pointer to this class is `renew`ed to a smaller size and this pointer is stored outside of the new space, `ptrDestructor` will be called.
 - Both take no parameters and have no return type.
-- They can not be overloadded.
+- They can not be overloaded, they can only be overrided.
 
 
 <sup>1</sup> Yeah, I like Python. Sue me.
