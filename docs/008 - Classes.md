@@ -39,12 +39,15 @@ There are two ways two initializate an object:
 - Call it (recommended way): 
   - `ClassType myObject = ClassType(/*parameters*/);` or `myObject = ClassType(/*parameters*/);` if it already was declared.
   - This way the desctructor will be automatically called at the end of the scope.
-  - You can also call `ClassType(/*parameters*/);` without assigning it, or when passing it to a function call. This way the destructor will be called at the end of the scope too.
+  - You can also call `ClassType(/*parameters*/);` without assigning it, or pass it to a function call. This way the destructor will be called at the end of the scope too.
+    - A compiler flag may allow the destruction of this object immediately after it was not assigned, even allowing to not allocate memory for it when possible.
 - `constructor` it yourself:
   - If you just declared an object, you can manually call the constructor: `myObject.constructor(/*parameters*/);`.
   - The only difference is that is your responsability to call the `desctructor` before leaving the scope. If you don't, there's a high chance you will introduce memory leaks.
 
-Either way, you can't return an object initialized this way out of its original scope. You have to return a heap-allocated pointer to your object if you want it to live outside the scope.
+Either way, you can't return an object initialized this way out of its original scope. You have to return a heap-allocated pointer to your object if you want it to live outside of the function (or method).
+
+The only exception to this is if the object is returned by a `nodestroy` declared function (or method). The destructor of this object will be called at the end of the new scope (the one that called the `nodestroy` declared function), unless the function is also declared as `nodestroy` and the object is also returned. And so on.
 
 ## Use
 

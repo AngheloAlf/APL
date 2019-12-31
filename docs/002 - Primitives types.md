@@ -59,7 +59,7 @@ Besides basic strings, a `String` class exists, which will be discussed in the s
 
 ### Machine related 
 
-- `usize_t`: Refers to memory sizes. It can hold any positive array index. Unsigned.
+- `usize_t`: Refers to memory sizes. It can hold any positive array index. It actual size is the highest size that the host machine can natively handle. Unsigned.
 - `uptr_t`: It can hold any pointer. Unsigned.
 - `sptr_t`: Intended to be used in `uptr_t` differences. Signed.
 - `ptrdiff_t`: For storing pointer differences. Signed.

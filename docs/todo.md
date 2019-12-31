@@ -19,7 +19,7 @@
 - [x] Literals
 - [x] Enums
 - [ ] Expressions
-- [ ] Main
+- [x] Main
 - [ ] Default heap allocation
 - [ ] Import system
 - [ ] Casting
@@ -66,6 +66,8 @@
     - [ ] Vector
       - A mathematical vector, not a C++ vector.
     - [ ] Matrix
+      - A mathematical matrix.
+  - [ ] Atomic
   - [ ] Regex
   - [ ] Sockets
   - [ ] Threads
