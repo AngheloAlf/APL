@@ -25,11 +25,11 @@
 - [ ] Import system
 - [x] Casting
 - [x] Variable arguments functions
-- [ ] Operator overload and magic methods
+- [x] Operator overload and magic methods
   - Python-like operator overloading and others
+- [ ] Global scope
 - [ ] Comments and indentation
 - [ ] Exceptions and backtrace
-- [ ] Global scope
 - [ ] Prototype modification
 - [ ] Compile time operators
 - [ ] Annotations and decorators
@@ -52,6 +52,7 @@
     - [ ] Smart pointer
   - [ ] Strings
   - [ ] Arrays
+  - [ ] Bytes
   - [ ] Memory allocation
   - [ ] Files
     - [ ] `stdIn`, `stdOut` and `stdErr`

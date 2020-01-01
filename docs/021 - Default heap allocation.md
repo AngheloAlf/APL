@@ -76,9 +76,9 @@ The `delete` operator will have different behavior depending on the type:
   - This translates to the following:
     ```
     // First example
-    delete_deallocator((int64 [])mem_example);
+    delete_deallocator(mem_example, ((int64 [])mem_example).len);
     // Second example
-    delete_deallocator(arr_example);
+    delete_deallocator(arr_example, arr_example.len);
     ```
 - Pointer
   - For example: `int16 ***mem_example;`, `delete mem_example;`.

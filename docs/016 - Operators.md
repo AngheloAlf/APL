@@ -17,7 +17,7 @@ The following are all the operators availables in this language. Their descripti
 | `++` | Suffix increment | Use it, then update it. | `b++;` / `a = b++;` |
 | `--` | Suffix decrement | Use it, then update it. | `b--;` / `a = b--;` |
 | `++` | Prefix increment | Update it, then use it. | `++b;` / `a = ++b;` |
-| `--` | Prefix increment | Update it, then use it. | `--b;` / `a = --b;` |
+| `--` | Prefix decrement | Update it, then use it. | `--b;` / `a = --b;` |
 
 ### Binary operators
 
@@ -126,7 +126,10 @@ Membership operators are used to test if a element is present in an object.
 | `::` | Scope resolution |  | `a::b` | [ ] | [ ] |
 | `(type)` | Type cast |  | `b = (int64)a;` | [x] | [x] |
 | `new` | Dynamic memory allocation |  | `a = new Thing();` | [ ] | [x] |
+| `new[]` | Dynamic array memory allocation |  | `a = new[n] Thing();` | [ ] | [x] |
+| `renew[]` | Dynamic array memory reallocation |  | `a = renew[i] a;` | [ ] | [ ] |
 | `delete` | Dynamic memory deallocation |  | `delete a;` | [ ] | [x] |
+| `delete[]` | Dynamic array memory deallocation |  | `delete[] a;` | [ ] | [x] |
 | `throw` | Throw operator |  |  | [ ] | [ ] |
 | `instanceof` | Instanceof operator |  | `a instanceof Thing` | [ ] | [ ] |
 
@@ -174,8 +177,12 @@ Operators are listed from top to bottom, in descending precedence.
 | 3 | `~a` | Bitwise not | Right to left |
 | 3 | `*a` | Dereference | Right to left |
 | 3 | `&a` | Address of | Right to left |
+| 3 | `(type)a` | Type cast | Right to left |
 | 3 | `new` | Dynamic memory allocation | Right to left |
+| 3 | `new[]` | Dynamic array memory allocation | Right to left |
+| 3 | `renew[]` | Dynamic array memory reallocation | Right to left |
 | 3 | `delete` | Dynamic memory deallocation | Right to left |
+| 3 | `delete[]` | Dynamic array memory deallocation | Right to left |
 | --- | --- | --- | --- |
 | 4 | `a ^^ b` | Exponentiation | Right to left |
 | --- | --- | --- | --- |
