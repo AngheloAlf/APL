@@ -24,7 +24,7 @@
 - [ ] Pseudo garbage collection
 - [ ] Import system
 - [x] Casting
-- [ ] Variable arguments functions
+- [x] Variable arguments functions
 - [ ] Operator overload and magic methods
   - Python-like operator overloading and others
 - [ ] Comments and indentation
@@ -54,7 +54,7 @@
   - [ ] Arrays
   - [ ] Memory allocation
   - [ ] Files
-    - [ ] `stdin`, `stdout` and `stderr`
+    - [ ] `stdIn`, `stdOut` and `stdErr`
   - [ ] Date (ISO 8601)
   - [ ] Time
   - [ ] Abstract data types (ADT)
@@ -75,6 +75,7 @@
   - [ ] Threads
   - [ ] Mutex
   - [ ] JSON
+  - [ ] Zip
   - [ ] Algorithms
     - [ ] Sorts
   - [ ] General purpose functions
