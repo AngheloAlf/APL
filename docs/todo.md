@@ -27,7 +27,7 @@
 - [x] Variable arguments functions
 - [x] Operator overload and magic methods
   - Python-like operator overloading and others
-- [ ] Global scope
+- [x] Global scope
 - [ ] Comments and indentation
 - [ ] Exceptions and backtrace
 - [ ] Prototype modification
@@ -56,7 +56,8 @@
   - [ ] Memory allocation
   - [ ] Files
     - [ ] `stdIn`, `stdOut` and `stdErr`
-  - [ ] Date (ISO 8601)
+  - [ ] Date 
+    - ISO 8601
   - [ ] Time
   - [ ] Abstract data types (ADT)
     - [ ] List
@@ -70,6 +71,7 @@
       - A mathematical vector, not a C++ vector.
     - [ ] Matrix
       - A mathematical matrix.
+  - [ ] Math
   - [ ] Atomic
   - [ ] Regex
   - [ ] Sockets

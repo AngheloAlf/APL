@@ -22,32 +22,12 @@ The built-in basic types are:
 | `uint64` | 64 bits | [0, 18 446 744 073 709 551 615] range  | unsigned |
 | `float32` | 32 bits | IEEE 754 | IEEE 754 single-precision binary floating-point |
 | `float64` | 64 bits | IEEE 754 | IEEE 754 double-precision binary floating-point |
-| `bool` | to be decided | `false` and `true` |  |
+| `bool` | 8 bits | `false` and `true` |  |
 | `void` | none | none | Not a type, but used by functions which don't have return value, and `void *`. |
 | `imaginary32` | 32 bits | (IEEE 754)*i | Handles imaginary numbers described by $b * i$ |
 | `imaginary64` | 64 bits | (IEEE 754)*i | Handles imaginary numbers described by $b * i$ |
 | `complex64` | 64 bits | IEEE 754 + (IEEE 754)*i | Handles complex numbers described by $a + b * i$ |
 | `complex128` | 128 bits | IEEE 754 + (IEEE 754)*i | Handles complex numbers described by $a + b * i$ |
-
-
-### Basic strings
-
-Like in C, APL has the notion of strings like a "null-terminated characters array".
-
-A basic string can be declared in two ways:
-- `char *aString;`
-- `char otherString[];`
-Each one has it's own advantages that will be discussed below.
-
-Please note that `int8 *str;` or `int8 str[]` also works since `int8` and `char` are the same.
-
-You can also define string literals with `""`. The `const` qualifier is mandatory when using string literals. For example:
-```
-const char *strLiteral = "I am an example.";
-const char otherLit[] = "This is other example.";
-```
-
-Besides basic strings, a `String` class exists, which will be discussed in the strings chapter.
 
 
 ### Complex and imaginary types
@@ -226,3 +206,23 @@ Depends.
 
 - If you want speed and as small memory usage as you can get, go for pointers. Pointers will always be as featureless as they have always been.
 - If you want a bit more of safety and small features and you don't care about the RAM/CPU overhead, arrays is the way.
+
+
+## Basic strings
+
+Like in C, APL has the notion of strings like a "null-terminated characters array".
+
+A basic string can be declared in two ways:
+- `char *aString;`
+- `char otherString[];`
+Each one has it's own advantages that will be discussed below.
+
+Please note that `int8 *str;` or `int8 str[]` also works since `int8` and `char` are the same.
+
+You can also define string literals with `""`. The `const` qualifier is mandatory when using string literals. For example:
+```
+const char *strLiteral = "I am an example.";
+const char otherLit[] = "This is other example.";
+```
+
+Besides basic strings, a `String` class exists, which will be discussed in the strings chapter.

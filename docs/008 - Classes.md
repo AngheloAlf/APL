@@ -47,7 +47,7 @@ There are two ways two initializate an object:
 
 Either way, you can't return an object initialized this way out of its original scope. You have to return a heap-allocated pointer to your object if you want it to live outside of the function (or method).
 
-The only exception to this is if the object is returned by a `nodestroy` declared function (or method). The destructor of this object will be called at the end of the new scope (the one that called the `nodestroy` declared function), unless the function is also declared as `nodestroy` and the object is also returned. And so on.
+The only exception to this is if the object is if the returned function (or method) is tagged `nodestroy`. The destructor of this object will be called at the end of the caller's scope, unless the called function is tagged `nodestroy`, or the variable where we are storing that return value is also tagged `nodestroy`.
 
 ## Use
 
