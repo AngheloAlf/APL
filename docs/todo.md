@@ -28,14 +28,12 @@
 - [x] Operator overload and magic methods
   - Python-like operator overloading and others
 - [x] Global scope
-- [ ] Comments and indentation
+- [x] Comments and indentation
 - [ ] Exceptions and backtrace
-- [ ] Prototype modification
 - [ ] Compile time operators
+- [ ] Prototype modification
 - [ ] Annotations and decorators
 - [ ] Keywords
-- [ ] FAQ
-  - How can there be a FAQ if nobody else is even aware this language exists?
 
 - [ ] Standard abstract lib
   - [ ] Interfaces
@@ -47,19 +45,23 @@
   - [ ] Abstract classes
     - [ ] 
 - [ ] Standard lib
-  - [ ] Bases
-    - [ ] Base class
-    - [ ] Smart pointer
+  - [ ] bases
+    - [ ] BaseClass
+    - [ ] SmartPointer
+    - [ ] Exception
+  - [ ] memory
   - [ ] Strings
   - [ ] Arrays
   - [ ] Bytes
-  - [ ] Memory allocation
-  - [ ] Files
+  - [ ] exceptions
+    - [ ] - IndexOverflowException
+    - [ ] - IndexUnderflowException
+  - [ ] files
     - [ ] `stdIn`, `stdOut` and `stdErr`
   - [ ] Date 
     - ISO 8601
-  - [ ] Time
-  - [ ] Abstract data types (ADT)
+  - [ ] time
+  - [ ] adt (Abstract data types)
     - [ ] List
       - Something like a C++ vector.
     - [ ] Queue
@@ -71,7 +73,8 @@
       - A mathematical vector, not a C++ vector.
     - [ ] Matrix
       - A mathematical matrix.
-  - [ ] Math
+  - [ ] math
+  - [ ] assert
   - [ ] Atomic
   - [ ] Regex
   - [ ] Sockets
@@ -79,7 +82,7 @@
   - [ ] Mutex
   - [ ] JSON
   - [ ] Zip
-  - [ ] Algorithms
+  - [ ] algorithms
     - [ ] Sorts
   - [ ] General purpose functions
     - [ ] Assert

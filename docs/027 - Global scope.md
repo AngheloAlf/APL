@@ -46,7 +46,7 @@ For basic types, the following functions works as casting.
 - `U complex_64<T, type U>(const T obj);`.
 - `U complex_128<T, type U>(const T obj);`.
 
-The following functions does not works with basic types, only with classes that have implemented the respective method..
+The following functions does not works with basic types, only with classes that have implemented the respective method.
 
 - `U integer<T, type U>(const T obj);`.
 - `U uinteger<T, type U>(const T obj);`.
@@ -57,4 +57,5 @@ The following functions does not works with basic types, only with classes that 
 ## Non-overridable functions
 
 - `T *addressof<type T>(const T var);`: Receives any variable, returns the pointer to the variable.
-- `std::String classname<type T>(const T obj);`: Receives an object, returns the class's name.
+- `std::String classname<T>(const T obj);`: Receives an object, returns the class's name.
+- `bool isconstr<T>(const T obj)`: Returns if an object has been constructed.
