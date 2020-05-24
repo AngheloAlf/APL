@@ -1,0 +1,54 @@
+namespace std{
+namespace bases{
+    public class BaseClass{
+        private bool __is_constructed;
+
+        protected overloadcall constructor(){
+            __is_constructed = true;
+        }
+
+        @OverloadDisabled
+        public overridecall destructor(){
+
+        }
+
+        @OverloadDisabled
+        public overridecall ptrConstructor(){
+
+        }
+
+        @OverloadDisabled
+        public overridecall ptrDestructor(){
+
+        }
+
+        public bool __isconstr__(){
+            return __is_constructed;
+        }
+
+        public std::String __str__(){
+            nodestroy std::String val = classname(*this) + ": 0x" + addressof(*this)
+            return val;
+        }
+
+        public bool __bool__(){
+            return true;
+        }
+
+        public bool __is__(BaseClass other){
+            return addressof(*this) == addressof(*other);
+        }
+
+        public bool __is_not__(BaseClass other){
+            return addressof(*this) != addressof(*other);
+        }
+
+        public BaseClass *__addressof__(){
+            return addressof(*this);
+        }
+
+    }
+}
+}
+@annotation
+$decorator

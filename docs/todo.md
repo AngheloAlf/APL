@@ -36,13 +36,13 @@
 - [ ] Keywords
 
 - [ ] Standard abstract lib
-  - [ ] Interfaces
+  - [ ] interfaces
     - [ ] BasicArithmetic
       - Addition, substraction, multiplication, division, unary plus, unary minus (at least with self)
     - [ ] Comparable
     - [ ] Callable
     - [ ] Shiftable
-  - [ ] Abstract classes
+  - [ ] abstract
     - [ ] 
 - [ ] Standard lib
   - [ ] bases

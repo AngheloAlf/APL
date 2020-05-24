@@ -1,0 +1,34 @@
+namespace std{
+namespace bases{
+    public class Exception{
+        protected std::String _msg;
+
+        public constructor(const std::String msg){
+            _msg = msg;
+        }
+
+        public constructor(conts char *msg){
+            _msg = std::String(msg);
+        }
+
+        @OverloadDisabled
+        public overridecall destructor(){
+
+        }
+
+        @OverloadDisabled
+        public overridecall ptrConstructor(){
+
+        }
+
+        @OverloadDisabled
+        public overridecall ptrDestructor(){
+
+        }
+
+        public std::String msg(){
+            return _msg;
+        }
+    }
+}
+}

@@ -1,0 +1,36 @@
+namespace std{
+namespace bases{
+    public class SmartPointer{
+        private int64 __counter;
+
+        protected overloadcall constructor(){
+            __counter = 0;
+        }
+
+        @OverloadDisabled
+        public overridecall destructor(){
+
+        }
+
+        @OverloadDisabled
+        public overridecall ptrConstructor(){
+            ++__counter;
+            if(__counter <= 0){
+                // freak out;
+            }
+        }
+
+        @OverloadDisabled
+        public overridecall ptrDestructor(){
+            --__counter;
+            if(__counter == 0){
+                selfdestruct();
+            }
+            if(__counter < 0){
+                // freak out;
+            }
+        }
+
+    }
+}
+}
